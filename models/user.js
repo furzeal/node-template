@@ -1,6 +1,6 @@
 'use strict';
 const mongoose = require('mongoose');
-const crypto = require('crypto');
+const bcrypt = require('bcrypt-nodejs');
 const Schema = mongoose.Schema;
 const UserSchema = new Schema({
     username: {
@@ -11,15 +11,23 @@ const UserSchema = new Schema({
         type: String,
         required: [
             true, 'Укажите пароль'
-        ],
-        set: v => v == ''
-            ? v
-            : crypto
-                .createHash('md5')
-                .update(v)
-                .digest('hex')
+        ]
     }
 });
 
-//просим mongoose сохранить модель для ее дальнейшего использования
-mongoose.model('user', UserSchema);
+// methods ======================
+// generating a hash
+UserSchema.methods.generateHash = function(password) {
+    return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
+};
+
+// checking if password is valid
+UserSchema.methods.isValidPassword = function(password) {
+    return bcrypt.compareSync(password, this.password);
+};
+
+
+
+
+// create the model for users and expose it to our app
+module.exports = mongoose.model('user', UserSchema);

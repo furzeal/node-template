@@ -1,228 +1,13 @@
 .l-section {
   width: 100vw;
   display: flex;
-  min-height: 600px;
+  height: 90vh;
+  flex-direction: column;
 }
-
-.c-section-title-container {
-  position: relative;
-  height: 120px;
-  display: flex;
-  flex: 2;
-  margin: 0 auto;
-}
-
-.c-section-title-container_works {
-  height: 171px;
-  margin: auto;
-  & .c-section-title {
-    color: $white;
-  }
-  & .c-section-title-bg {
-    stroke: $white;
-  }
-}
-
-.c-section-title-container_yells {
-  height: 202px;
-  margin: auto;
-  & .c-section-title {
-    color: $white;
-  }
-  & .c-section-title-bg {
-    stroke: $white;
-    transform: scaleX(-1);
-    right: 0;
-  }
-}
-
-.c-section-title-bg {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 50%;
-  width: 100%;
-  height: 100%;
-  fill: none;
-  stroke: $blue;
-  stroke-width: 0.75px;
-  opacity: 0.2;
-  transform: translate(50%);
-}
-
-.c-section-title {
-  @include sansus;
-  font-size: 63px;
-  color: $gray;
-  text-transform: uppercase;
-  margin: auto;
-  line-height: 4.2rem;
-  text-align: center;
-  @include tablet {
-    font-size: 56px;
-  }
-  @include phone {
-    font-size: 40px;
-  }
-}
-
-.c-section-title_blog {
-  color: $white;
-  margin: 8px auto;
-
-}
-
-.c-block-title {
-  @extend .c-section-title;
-  font-size: 35px;
-  display: block;
-  width: 55%;
-  margin: 0 auto 15px;
-  line-height: 2.6rem;
-  text-align: center;
-  @include desktop {
-    width: 60%;
-  }
-  @include laptop {
-    width: 71%;
-  }
-  @include tablet{
-    width: 74%;
-    font-size:33px;
-  }
-  @include phone{
-    width: 47%;
-    font-size:24px;
-  }
-  &_white {
-    color: $white;
-    width: 100%;
-    text-align: center;
-  }
-  &:after {
-    content: "";
-    width: 90px;
-    border-bottom: 3px solid $gray;
-    display: block;
-    margin: 16px auto 0;
-    @include phone{
-      margin: 6px auto 0;
-      width: 70px;
-    }
-  }
-
-  &_welcome {
-    color: $white;
-    width: 100%;
-    text-align: center;
-    margin-bottom: 30px;
-    &:after {
-      content: none;
-    }
-  }
-}
-
-.c-block-title_left {
-  margin: auto 0;
-  width: 80%;
-  text-align: left;
-  &:after {
-    margin: 16px 0 0 0;
-    border-bottom: 3px solid rgba($gray, 0.5);
-  }
-}
-
-.c-block-title_pure {
-  text-align: left;
-  width: 100%;
-  &:after {
-    content: none;
-  }
-}
-
-.c-block-text {
-  color: $gray;
-}
-
-.c-block-text p {
-  margin-bottom: 12px;
-}
-
-.c-footer-wrapper {
-
-}
-
-.c-footer-wrapper_transparent {
-}
-
-.hide {
-  display: none;
-}
-
-.c-section__btn {
-  width: 25+80px;
-  height: 16.5vh;
-  margin: auto auto 0;
-  fill: $white;
-  padding: 0 40px;
-  z-index: 1000;
-  cursor: pointer;
-  &:hover {
-    .c-section__icon {
-      opacity: 0.8;
-    }
-  }
-}
-
-.c-section__btn_prev {
-  & .c-section__icon {
-    transform: rotate(180deg);
-  }
-}
-
-.c-section__icon {
-  transition: 0.3s;
-  width: 100%;
-  opacity: 0.5;
-}
-
-// TRIANGLES
-.c-section__triangle {
-  display: block;
-  width: 100%;
-  height: 110px;
-  position: absolute;
-  bottom: 100%;
-  &_color_beiger {
-    fill: $beige;
-
-  }
-  &_color_bg-white {
-    fill: $bg-white;
-  }
-  &_color_dark-blue {
-    fill: rgba($dark-blue, 0.85)
-  }
-
-  @include tablet {
-    height: 65px;
-    &_about {
-      width: 50%;
-    }
-    &_right {
-      left: 50%;
-      fill: $beige;
-    }
-  }
-  @include phone {
-    height: 35px;
-  }
-}
-
 
 .l-section__popup {
   position: fixed;
-  background: rgba(#fff,0.8);
+  background: #fff;
   top: 48%;
   left: 50%;
   transform: translate(-50%,-50%);
@@ -230,8 +15,12 @@
   border-radius: 5px;
   overflow: hidden;
   display: none;
+  box-shadow: 0 0 10px 2px rgba(153,153,153,1);
 }
 
 .l-section__status {
-  padding: 30px;
+  padding: 30px 60px;
+}
+.l-section__copyright{
+  margin: 10px auto;
 }

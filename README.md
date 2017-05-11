@@ -1,4 +1,4 @@
-# Loftschool gulp assembly
+# node.js gulp assembly
 ## Maxim Shatalov
 
 > Assembly is designed for gulp#4.0.> 

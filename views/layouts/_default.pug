@@ -32,14 +32,13 @@ html
         script(src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")
         <![endif]-->
     body
-        //block section1
-        //block section2
-        //block section3
-        include ../components/_preloader
+        // include ../components/_preloader
         .wrapper
+            include ../components/_header
             block section1
             block section2
             block section3
+            include ../components/_footer
             .l-section__popup
                 .l-section__status #{status}
         block svg

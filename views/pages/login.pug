@@ -1,0 +1,20 @@
+extends ../layouts/_default
+
+block section1
+    section.l-section
+        .c-form-container
+            form.c-form#auth-form(action='login' novalidate=true method="post")
+                .c-form-title Авторизация
+                .c-form__input-wrapper
+                    input.c-form__input.c-form__input_bg_white(name="username" type="text" placeholder="Логин" required)
+                    +svg('c-form__input-icon',`login`)
+                .c-form__input-wrapper
+                    input.c-form__input.c-form__input_bg_white(name="password" type="password" placeholder="Пароль" required)
+                    +svg('c-form__input-icon',`password`)
+                .c-checkbox
+                    input.c-checkbox__input(type="checkbox" name="remember-me" checked=true required)#remember-me
+                    label.c-label.c-checkbox__label(for='remember-me') Запомнить меня
+                        +svg('c-checkbox__checked-icon',`check`)
+            .c-form__panel
+                a.c-form__button(href='/') На главную
+                button.c-form__button.c-form__button_notfirst(type="submit" form="auth-form") Войти

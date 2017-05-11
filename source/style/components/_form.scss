@@ -1,32 +1,18 @@
 .c-form-container {
-  width: 380px;
-  margin: 0 auto;
-
-  &_yells {
-    background: rgba($white, 0.05);
-    @include phone {
-      width: 90%;
-    }
-  }
-  &_welcome {
-    //background: inherit;
-    @include phone {
-      width: 100%;
-    }
-    .c-block-title_pure {
-      text-align: center;
-    }
-    .c-form__button {
-      background: rgba($blue, 0.45);
-      &:hover {
-        background: rgba($blue, 0.75);
-      }
-    }
-  }
+  width: 350px;
+  margin: auto;
+  background: rgba($green,0.5);
+  border-radius:10px;
+  overflow: hidden;
 }
-
+.c-form-title{
+  @include roboto(light);
+  font-size:40px;
+  margin: 0 auto 25px;
+  color: $white;
+}
 .c-form {
-  padding: 35px 20px 10px 20px;
+  padding: 20px 20px 10px 20px;
   display: flex;
   flex-direction: column;
   flex-flow: wrap;
@@ -58,14 +44,14 @@
   outline: none;
   border: 1px solid transparent;
   &:focus {
-    border-color: $map-blue;
+    border-color: $green;
   }
   &_bg_white {
     color: $dark-gray;
     margin: auto;
   }
   &.field_ok {
-    border-color: $map-blue;
+    border-color: $green;
   }
   &.field_error {
     border-color: $red;
@@ -101,8 +87,9 @@
   cursor: pointer;
   background: none;
   transition: 0.3s;
+  text-decoration: none;
   &:hover {
-    background: rgba($blue, 0.45);
+    background: rgba($green, 0.45);
   }
   &_notfirst {
     position: relative;
@@ -119,9 +106,9 @@
     }
   }
   &_highlighted {
-    background: rgba($blue, 0.7);
+    background: rgba($green, 0.7);
     &:hover {
-      background: rgba($blue, 0.93);
+      background: rgba($green, 0.93);
     }
   }
 
@@ -129,10 +116,10 @@
 
 .c-nav-panel__button {
   flex: 1;
-  background: rgba($blue, 0.45);
+  background: rgba($green, 0.45);
   transition: 0.3s;
   &:hover {
-    background: rgba($blue, 0.75);
+    background: rgba($green, 0.75);
   }
 }
 
@@ -162,12 +149,11 @@
     content: '';
     height: 20px;
     width: 20px;
-    background: $blue;
+    background: $white;
     margin-right: 10px;
     border-radius: 2px;
     overflow: hidden;
-    border: 1px solid transparent;
-
+    //border: 1px solid transparent;
   }
 }
 
@@ -177,7 +163,7 @@
   position: absolute;
   left: 0;
   top: 0;
-  fill: $white;
+  fill: rgba($green,0.8);
   opacity: 0;
   transition: 0.3s;
 }

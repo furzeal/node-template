@@ -17,14 +17,14 @@ const isAdmin = (req, res, next) => {
 
 // models
 require('../models/user');
-require('../models/skill');
+require('../models/template');
 
 router.get('/', isAdmin, function (req, res) {
     var obj = {
         title: "Панель администрирования",
     };
     //Object.assign(obj, skills);
-    const Model = mongoose.model('skill');
+    const Model = mongoose.model('template');
     Model.find().then(skills => {
         Object.assign(obj, {skills: skills});
         res.render('pages/admin', obj);

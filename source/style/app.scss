@@ -2,7 +2,8 @@
 $white: #fff;
 $orange: #fca211;
 $dred:#a4151a;
-$gray:#474b57;
+$gray: #4d5154;
+$green:#04953a;
 $dark-gray:#373e42;
 $light-gray:#dfdcd5;
 $blue:#004cd1;
@@ -38,8 +39,8 @@ $font-size:16px;
 @import 'common/sprite';
 
 // components
+@import 'components/_header';
 @import 'components/_section';
-@import 'components/_developer';
 @import 'components/_contacts';
 @import 'components/_menu';
 @import 'components/_socials';
@@ -48,14 +49,11 @@ $font-size:16px;
 @import 'components/_slider';
 @import 'components/_form';
 @import 'components/_frame';
-@import 'components/_blinking-stars';
 @import 'components/_preloader';
 
 
 // pages
-@import 'pages/about';
-@import 'pages/works';
-@import 'pages/blog';
+@import 'pages/template';
 @import 'pages/index';
 @import 'pages/admin';
 
